@@ -1,0 +1,25 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "a CLI App that generates readme file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pankuanting102/Readme-Generator.git"
+  },
+  "keywords": [
+    "readme"
+  ],
+  "author": "Kuan-Ting Pan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pankuanting102/Readme-Generator/issues"
+  },
+  "homepage": "https://github.com/pankuanting102/Readme-Generator#readme",
+  "dependencies": {
+    "inquirer": "^7.3.3"
+  }
+}
