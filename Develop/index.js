@@ -6,21 +6,70 @@ const { promisify } = require("util");
 const writeAsycn = util.promisify(fs.writeFile)
 // array of questions for user
 const questions = [
-    {
-        message: "What is your title",
+    {   
+        type: "input",
+        message: "Project Title",
         name: "title",
     },
 
     {
-        message: "What is your name",
-        name: "name",
+        type: "input",
+        message: "Description",
+        name: "description",
     },
 
     {
-        message: "What is your age",
-        name: "age",
+        type: "input",
+        message: "Installation Instructions",
+        name: "installation",
     },
+
+    {
+        type: "input",
+        message: "Usage Information",
+        name: "usage",
+    },
+
+    {
+        type: "input",
+        message: "Contribution Guidelines",
+        name: "contriution",
+    },
+
+    {
+        type: "input",
+        message: "Test Instruction",
+        name: "test",
+    },
+
+    {
+        type: "list",
+        message: "What License are you using?",
+        name: "license",
+        choices: [
+          "DUB",
+          "GitHub",
+          "NPM",
+          "Conda",
+          "PYPI",
+        ]
+    },
+
+    {
+        type: "input",
+        message: "What's your GitHub username?",
+        name: "github",
+    },
+
+    {
+        type: "input",
+        message: "What's your email address?",
+        name: "email",
+    },
+
+    
 ];
+
 
 // function to write README file
 async function writeToFile(fileName, data) {
@@ -34,7 +83,7 @@ async function writeToFile(fileName, data) {
 async function init() {
     const answers = await inquirer.prompt(questions);
     const htmlString = generateMarkdown(answers)
-    await writeAsycn(answers.name + ".md", htmlString)
+    await writeAsycn(answers.title + ".md", htmlString)
 }
 
 // function call to initialize program
