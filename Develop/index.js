@@ -8,51 +8,50 @@ const writeAsycn = util.promisify(fs.writeFile)
 const questions = [
     {   
         type: "input",
-        message: "Project Title",
+        message: "What's the name of your project title?",
         name: "title",
     },
 
     {
         type: "input",
-        message: "Enter Description",
+        message: "Please enter description for this project",
         name: "description",
     },
 
     {
         type: "input",
-        message: "Enter Installation Instructions",
+        message: "Please provide installation instruction if any",
         name: "installation",
     },
 
     {
         type: "input",
-        message: "Enter Usage Information",
+        message: "Please enter usage information",
         name: "usage",
     },
 
     {
-        type: "input",
-        message: "Enter Contribution Guidelines",
-        name: "contriutiing",
-    },
-
-    {
-        type: "input",
-        message: "Enter Test Instruction",
-        name: "test",
-    },
-
-    {
         type: "list",
-        message: "What License are you using?",
+        message: "Select License you are using:",
         name: "license",
         choices: [
-          "DUB",
-          "GitHub",
-          "NPM",
-          "Conda",
-          "PYPI",
+          "Apache",
+          "MIT",
+          "ISC",
+          "GNU GPLv3",
         ]
+    },
+
+    {
+        type: "input",
+        message: "Who is/are contributing to this project?",
+        name: "contributing",
+    },
+
+    {
+        type: "input",
+        message: "Please provide test instruction if applicable.",
+        name: "test",
     },
 
     {
