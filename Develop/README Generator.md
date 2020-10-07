@@ -63,7 +63,7 @@ Trilogy & Columbia University Coding Boot Camp
 
 # Test
 
-none
+N/A
 
 
 
@@ -72,7 +72,7 @@ none
 
 # Questions 
 
-GitHub Repository: pankuanting102
+GitHub Repository: https://github.com/pankuanting102
 
 Email Address: pankuanting@gmail.com
 
